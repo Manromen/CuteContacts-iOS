@@ -1,5 +1,6 @@
 import QtQuick 2.2
 import QtQuick.Controls 1.1
+import IOSHelper 1.0
 
 import "pages"
 
@@ -8,6 +9,14 @@ ApplicationWindow {
     width: 320
     height: 568
     title: qsTr("Hello World")
+
+    IOSHelper {
+        id: iOSHelper
+    }
+
+    Component.onCompleted: {
+        iOSHelper.makeFullscreen()
+    }
 
     StackView {
         id: pageStack

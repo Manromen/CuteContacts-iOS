@@ -1,6 +1,6 @@
 TEMPLATE = app
 
-QT += qml quick widgets
+QT += qml quick widgets gui-private
 
 SOURCES += main.cpp
 
@@ -11,3 +11,9 @@ QML_IMPORT_PATH =
 
 # Default rules for deployment.
 include(deployment.pri)
+
+HEADERS += \
+    ioshelper.h
+
+OBJECTIVE_SOURCES += \
+    ioshelper.mm
